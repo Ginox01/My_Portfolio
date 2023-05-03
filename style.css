@@ -72,6 +72,9 @@ body {
     transform: translateX(-400%);
 }
 
+.project:last-child {
+    margin-bottom: 20px;
+}
 
 
 .container {
@@ -265,6 +268,35 @@ i {
     user-select: none;
 }
 
+.wraps-hobbies {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.hobby {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.hobby i {
+    font-size: 50px;
+}
+
+.hobby-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 300px;
+    min-height: 100px;
+}
+
+.hobby-info p {
+    text-align: center;
+}
 
 
 @media (max-width: 800px){
