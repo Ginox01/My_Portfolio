@@ -2,8 +2,10 @@
 
 
 :root{
-    --html--css--javascript--project:rgb(96, 84, 173);
-    --angular:rgb(52, 153, 52);    
+    --html--css--javascript--project:rgb(59, 54, 142);
+    --angular:rgb(52, 153, 52);
+    --php--sql: rgb(160, 15, 15);
+    --documentation: #3c9884;    
 }
 
 
@@ -13,6 +15,12 @@
     padding: 0;
 }
 
+
+html {
+    overflow-x: hidden;
+}
+
+
 body {
     overflow-x: hidden;
     background-color: wheat;
@@ -21,7 +29,7 @@ body {
     overflow-x: hidden;
     min-height: 100vh;
     width: 100vw;
-    margin-bottom: 200px;
+    margin-bottom: 250px;
     
 }
 
@@ -46,6 +54,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100%;
 }
 
 .project {
@@ -62,6 +71,8 @@ body {
     cursor: pointer;
     transform: translateX(-400%);
 }
+
+
 
 .container {
     width: 100%;
@@ -87,6 +98,16 @@ body {
     color: white;
 }
 
+.php-sql {
+    background-color: var(--php--sql);
+    color: white;
+}
+
+.documentation {
+    background-color: var(--documentation);
+    color: white;
+}
+
 
 .project:nth-of-type(even){
     transform: translateX(400%);
@@ -96,6 +117,7 @@ body {
     box-shadow: 1px 8px 12px 1px rgba(0, 0, 0, 0.8);
 }
 
+
 .project:active {
     transform: scale(1.9);
     background-color: black;
@@ -104,9 +126,6 @@ body {
 .project.active-project {
     transform: translateX(0);
 }
-
-
-
 
 
 .background-page {
@@ -202,6 +221,49 @@ a {
     font-weight: bold;
 }
 
+.wrap-table {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.wrap-table table {
+    width: 90%;
+    text-align: center;
+    background-color: white;
+    border: wheat 2px solid;
+}
+
+
+
+td{
+    border: 2px wheat solid;
+    color: var(--documentation);
+}
+
+
+
+th {
+    border: 2px wheat solid;
+    color: var(--documentation);
+    background-color: white;
+}
+
+i {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.icons {
+    color: var(--documentation);
+    
+}
+
+.replace-btn {
+    color: var(--documentation);
+    user-select: none;
+}
 
 
 
@@ -210,6 +272,15 @@ a {
     .container-page{
         min-height: 80%;
         width: 80%;
+    }
+
+}
+
+@media (max-width: 400px){
+
+    .container-page{
+        min-height: 80%;
+        width: 98%;
     }
 
 }

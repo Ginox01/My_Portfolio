@@ -1,7 +1,9 @@
-const allContainersprojects = document.querySelectorAll('.project');
+const allContainersprojects = document.querySelectorAll('.project');//provare con classe move al posto di project
 const pages = document.querySelectorAll('.background-page');
+console.log(pages);
 
 let currentPage;
+let pageOpen = false;
 
 window.addEventListener('scroll',hideShowTheProject);
 //This function show or hide the containers project when the user scroll the page
@@ -24,11 +26,15 @@ allContainersprojects.forEach(project=>{
 })
 //This Function show the page to explain the project
 function showPage(e){
+    if(pageOpen){
+        closeThePageProject();
+    }
     
     let selectPage = e.target.dataset.project;
 
     pages[selectPage].style.left = 0 + "%";
     currentPage = selectPage;
+    pageOpen = true;
 
 }
 
@@ -40,6 +46,7 @@ const btnsClose = document.querySelectorAll('.btn-close');
 btnsClose.forEach(btnClose=>{
     btnClose.addEventListener('click',closeThePageProject);
 })
-function closeThePageProject(e){
+function closeThePageProject(){
     pages[currentPage].style.left = 400+'%'    
 }
+//AGGIUNTO ISOPEN IMPLEMENTARE
