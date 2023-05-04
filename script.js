@@ -1,6 +1,9 @@
+
+
 const allContainersprojects = document.querySelectorAll('.project');//provare con classe move al posto di project
 const pages = document.querySelectorAll('.background-page');
-console.log(pages);
+const arrows = document.querySelectorAll('.arrow');
+
 
 let currentPage;
 let pageOpen = false;
@@ -49,4 +52,62 @@ btnsClose.forEach(btnClose=>{
 function closeThePageProject(){
     pages[currentPage].style.left = 400+'%'    
 }
-//AGGIUNTO ISOPEN IMPLEMENTARE
+
+
+//HIDE OR DISPLAY THE CONTACTS
+
+arrows.forEach((arrow,idx)=>{
+    
+    arrow.addEventListener('click',()=>hideOrDisplayContact(arrow,idx));
+});
+
+function hideOrDisplayContact(arrow,idx){
+    let accords = document.querySelectorAll('.accord');
+    let contentsDiv = document.querySelectorAll('.accord-content');
+    let arrowEl = arrows[idx];
+    let accord = accords[idx];
+    let divContent = contentsDiv[idx];
+    if(accord.classList.contains('off')){
+        arrowEl.style.display = "none";
+        accord.classList.remove('off');
+        let x = 0;
+        const interval = setInterval(()=>{
+            divContent.style.width = x +'px';
+            x++;
+            if(x >= 250){
+                clearInterval(interval);
+                arrowEl.style.display = "";
+                arrowEl.innerHTML = "←";
+            }
+        },5)
+
+    }else if((!accord.classList.contains('off'))){
+        accord.classList.add('off');
+        let y = 250;
+        arrowEl.style.display = "none";
+        const int = setInterval(()=>{
+            divContent.style.width = y + 'px';
+            y--;
+            if(y <= 0){
+                clearInterval(int);
+                arrowEl.style.display = "";
+                arrowEl.innerHTML = "→";
+            }
+        },5)
+    } 
+}
+
+
+
+
+//TURNS THE CIRCLE 
+
+turnsTheCircle();
+function turnsTheCircle(){
+    const circle = document.querySelector('.circle');
+    let i = 0;
+    setInterval(()=>{
+        circle.style.transform = 'rotate(' + i + 'deg)';
+        i++
+    },100)
+}
