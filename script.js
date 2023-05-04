@@ -106,8 +106,11 @@ turnsTheCircle();
 function turnsTheCircle(){
     const circle = document.querySelector('.circle');
     let i = 0;
-    setInterval(()=>{
+    const int = setInterval(()=>{
         circle.style.transform = 'rotate(' + i + 'deg)';
-        i++
-    },100)
+        i += 90;
+        if( i > 360000){
+            i = 0;
+        }
+    },2000)
 }
