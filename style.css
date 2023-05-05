@@ -421,6 +421,8 @@ i {
         width: 90%;
     }
 
+    
+
     .circle {
         height: 300px;
         width: 300px;
@@ -464,6 +466,16 @@ i {
 
 }
 
+@media (max-width: 700px){
+    .wrap-accord {
+        width: 100%;
+    }
+
+    .accord-info {
+        padding-left: 20px;
+    }
+}
+
 
 @media (max-width: 650px){
 
@@ -489,6 +501,20 @@ i {
     *{
         font-size: 20px;
     }
+    td {
+        font-size: 14px;
+    }
+
+    .accord-info {
+        padding-left: 0;
+    }
+    .accord div > p {
+        font-size: 16px
+    }
+    .arrow {
+        padding-left: 10px;
+        font-size: 16px;
+    }
 
 }
 
@@ -509,7 +535,23 @@ i {
         height: 100px;
     }
 
-    
+     td {
+        font-size: 12px;
+    }
+
+    .accord div > p {
+        font-size: 10px
+    }
+
+    .accord-info {
+        width: 60px;
+        padding: 0;
+    }
+
+    .arrow {
+        padding-left: 5px;
+        font-size: 12px;
+    }
 
 
 
