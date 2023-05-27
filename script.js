@@ -1,8 +1,39 @@
-
-
+const wrapWelcome = document.getElementById('wrap-welcome');
 const allContainersprojects = document.querySelectorAll('.project');//provare con classe move al posto di project
 const pages = document.querySelectorAll('.background-page');
 const arrows = document.querySelectorAll('.arrow');
+const btnWelcomeClose = document.querySelector('.close-icon');
+
+setTimeout(()=>{
+    displayWelcomeMessage();
+},800)
+
+function displayWelcomeMessage(){
+    wrapWelcome.style.display = "flex";
+    let x = 0;
+    let interv = setInterval(()=>{
+        wrapWelcome.style.opacity = x + '%';
+        x++;
+        if(x > 99){
+            clearInterval(interv);
+        }
+    },10)
+}
+
+btnWelcomeClose.addEventListener('click',closeWelcomeMessage);
+function closeWelcomeMessage(){
+    let x = 100;
+    let interv = setInterval(()=>{
+        wrapWelcome.style.opacity = x + '%';
+        x--;
+        if(x < 0){
+            clearInterval(interv);
+            setTimeout(()=>{
+                wrapWelcome.style.display = "none";
+            },200)
+        }
+    },10)
+}
 
 
 let currentPage;
