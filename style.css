@@ -59,6 +59,10 @@ body {
     overflow: scroll;
 }
 
+.welcome::-webkit-scrollbar {
+    width: 1px;
+}
+
 .close-icon {
     display: block;
     font-weight: bolder;
