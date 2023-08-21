@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
 
 
-:root{
-    --html--css--javascript--project:rgb(59, 54, 142);
-    --angular:rgb(52, 153, 52);
+:root {
+    --html--css--javascript--project: rgb(59, 54, 142);
+    --angular: rgb(52, 153, 52);
     --php--sql: rgb(160, 15, 15);
-    --documentation: #3c9884;    
+    --documentation: #3c9884;
 }
 
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -31,7 +31,7 @@ body {
     min-height: 100vh;
     width: 100vw;
     margin-bottom: 250px;
-    
+
 }
 
 
@@ -48,7 +48,7 @@ body {
     transition: all 0.6s ease;
 }
 
-.welcome{
+.welcome {
     height: 60%;
     width: 80%;
     background-color: white;
@@ -56,6 +56,7 @@ body {
     border-radius: 10px;
     position: relative;
     font-size: 24px;
+    overflow: scroll;
 }
 
 .close-icon {
@@ -159,7 +160,7 @@ body {
 }
 
 
-.project:nth-of-type(even){
+.project:nth-of-type(even) {
     transform: translateX(400%);
 }
 
@@ -194,11 +195,12 @@ body {
 
 }
 
-.container-page{
-    min-height: 60%;
+.container-page {
+
     width: 80%;
     background-color: whitesmoke;
     z-index: 5;
+
 }
 
 .page-title {
@@ -287,7 +289,7 @@ a {
 
 
 
-td{
+td {
     border: 2px wheat solid;
     color: var(--documentation);
 }
@@ -307,7 +309,7 @@ i {
 
 .icons {
     color: var(--documentation);
-    
+
 }
 
 .replace-btn {
@@ -317,7 +319,7 @@ i {
 
 .wraps-hobbies {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .hobby {
@@ -356,7 +358,7 @@ i {
     margin-bottom: 2px;
     justify-content: flex-start;
 
-} 
+}
 
 .accord-info {
     border-radius: 5px 0px 0px 5px;
@@ -417,7 +419,7 @@ i {
     position: fixed;
     top: -25%;
     left: -15%;
-} 
+}
 
 .sez {
     height: 50%;
@@ -429,14 +431,14 @@ i {
     transform: rotate(0deg);
     padding: 0;
     margin: 0;
-    
+
 }
 
 .sez i {
     font-size: 50px;
 }
 
-#sez-1{
+#sez-1 {
     background-color: red;
     top: 0;
     left: 0;
@@ -449,7 +451,7 @@ i {
     color: white;
 }
 
-#sez-3{
+#sez-3 {
     top: 50%;
     left: 0;
     background-color: yellowgreen;
@@ -461,16 +463,16 @@ i {
     background-color: rgb(162, 0, 255);
 }
 
-@media (max-width: 950px){
+@media (max-width: 950px) {
 
-    .container-page{
+    .container-page {
         min-height: 80%;
         width: 90%;
     }
 
     .welcome {
         font-size: 20px;
-    }   
+    }
 
     .circle {
         height: 300px;
@@ -485,9 +487,9 @@ i {
 }
 
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
 
-    .container-page{
+    .container-page {
         min-height: 80%;
         width: 80%;
     }
@@ -498,7 +500,7 @@ i {
 
     .hobby-info p {
         font-size: 12px;
-        
+
     }
 
     .wraps-hobbies {
@@ -511,11 +513,11 @@ i {
         font-size: 20px;
     }
 
-    
+
 
 }
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
     .wrap-accord {
         width: 100%;
     }
@@ -526,23 +528,27 @@ i {
 }
 
 
-@media (max-width: 650px){
+@media (max-width: 650px) {
 
     .welcome {
         font-size: 18px;
-        overflow-y: auto;
+        height: 400px;
     }
 
-    .close-icon{
+
+
+
+    .close-icon {
         width: 30px;
         height: 30px;
         font-size: 30px;
         padding-bottom: 5px;
     }
 
-    .container-page{
-        min-height: 80%;
+    .container-page {
+        max-height: 600px;
         width: 80%;
+        overflow: scroll;
     }
 
     .circle {
@@ -555,13 +561,15 @@ i {
     .sez i {
         font-size: 35px;
     }
+
     .main {
         font-size: 20px;
     }
 
-    *{
+    * {
         font-size: 20px;
     }
+
     td {
         font-size: 14px;
     }
@@ -569,9 +577,11 @@ i {
     .accord-info {
         padding-left: 0;
     }
-    .accord div > p {
+
+    .accord div>p {
         font-size: 16px
     }
+
     .arrow {
         padding-left: 10px;
         font-size: 16px;
@@ -581,18 +591,19 @@ i {
 
 
 
-@media (max-width: 450px){
+@media (max-width: 450px) {
 
     .welcome h3 {
         padding-top: 20px;
     }
 
-    .container-page{
+    .container-page {
         min-height: 80%;
         width: 98%;
     }
+
     .circle {
-        position:static;
+        position: static;
     }
 
     .project {
@@ -600,11 +611,11 @@ i {
         height: 100px;
     }
 
-     td {
+    td {
         font-size: 12px;
     }
 
-    .accord div > p {
+    .accord div>p {
         font-size: 10px
     }
 
